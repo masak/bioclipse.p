@@ -1,0 +1,67 @@
+============================
+=== Plan for Bioclipse-P ===
+============================
+
+=====
+Tasks
+=====
+
+* Create SVN or git repo for Bioclipse-P so everyone can test the program
+* Get EMF-GMF to work, i.e. follow some tutorial
+	- We want a canvas where we can drag-and-drop boxes and other symbols, which represent different operators
+	- Look at and perhaps borrow code from Knime and RapidMiner
+	- How give input (i.e. set parameters) to operators? Wizard? Multipage editor? Something else?
+	- How save the current state of a session? Let operators wrap around XML-files or something similar?
+* Couple R functionality to the boxes
+	- rJava
+	- Look at and perhaps borrow code from JGR
+* iPred handles cross-validation etc.
+	- Computing on the language to handle stacking of operators which are executed inside a cross-validation loop
+	- Write predict methods for preprocessing operators (R does not provide this in general)
+* Enable spreadsheet functionality via *** (same library that Arvid is using). It must be able to deal with strings (i.e. not only numbers) and grouping of columns and rows.
+* Enable interactive plotting via the iPlots R-package, which is written in Java. It will have to be extended.
+
+=============
+Distant tasks
+=============
+
+* Make HPC resources available via the graphical user interface
+	- Parallelize (R/parallel, snow, RHIPE packages)
+* Enable other computational backends, e.g. BUGS/JAGS, Weka etc.
+	
+====================
+Graphical components
+====================
+
+* Tree view with operators logically grouped into packages. The operators are drag-and-dropable into the canvas area.
+* Model view with logical grouping of models (peak at JGR)
+* Spreadsheet functionality
+* Data view..? (Which datasets are loaded?)
+* Plotting view or editor (with backtracking to original data)
+* Chemical view (JChemPaint and Jmol)
+* Biological view (alignment editor and Jmol, connection to Bioconductor)
+
+=======
+Writing
+=======
+
+* Tutorial about how to enable more R-functionality in Bioclipse-P
+* Article in Journal of Statistical Software or application note in Bioinformatics or BMC Bioinformatics
+* Article in Rnews
+* Article in Journal of Chemometrics or Journal of Cheminformatics
+
+==========
+Time frame
+==========
+
+* When can we have a working prototype?
+* How much time do the different tasks outlined above take?
+
+===================
+The first use cases
+===================
+
+* Cross-validated lm.ridge operation from start to end (lm.ridge instead of lm because lm.ridge involves setting a parameter)
+	- Centering and scaling of data
+	- Cross-validation of the whole procedure
+* Random forest
