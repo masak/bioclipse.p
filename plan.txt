@@ -13,7 +13,7 @@ Tasks
     - How give input (i.e. set parameters) to operators? Wizard? Multipage editor? Something else?
     - How save the current state of a session? Let operators wrap around XML-files or something similar?
 * Couple R functionality to the boxes
-    - rJava
+    - JRI <http://www.rforge.net/JRI/>
     - Look at and perhaps borrow code from JGR
 * iPred handles cross-validation etc.
     - Computing on the language to handle stacking of operators which are executed inside a cross-validation loop
