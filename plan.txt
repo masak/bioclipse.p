@@ -8,16 +8,16 @@ Tasks
 
 * Create SVN or git repo for Bioclipse-P so everyone can test the program
 * Get EMF-GMF to work, i.e. follow some tutorial
-	- We want a canvas where we can drag-and-drop boxes and other symbols, which represent different operators
-	- Look at and perhaps borrow code from Knime and RapidMiner
-	- How give input (i.e. set parameters) to operators? Wizard? Multipage editor? Something else?
-	- How save the current state of a session? Let operators wrap around XML-files or something similar?
+    - We want a canvas where we can drag-and-drop boxes and other symbols, which represent different operators
+    - Look at and perhaps borrow code from Knime and RapidMiner
+    - How give input (i.e. set parameters) to operators? Wizard? Multipage editor? Something else?
+    - How save the current state of a session? Let operators wrap around XML-files or something similar?
 * Couple R functionality to the boxes
-	- rJava
-	- Look at and perhaps borrow code from JGR
+    - rJava
+    - Look at and perhaps borrow code from JGR
 * iPred handles cross-validation etc.
-	- Computing on the language to handle stacking of operators which are executed inside a cross-validation loop
-	- Write predict methods for preprocessing operators (R does not provide this in general)
+    - Computing on the language to handle stacking of operators which are executed inside a cross-validation loop
+    - Write predict methods for preprocessing operators (R does not provide this in general)
 * Enable spreadsheet functionality via *** (same library that Arvid is using). It must be able to deal with strings (i.e. not only numbers) and grouping of columns and rows.
 * Enable interactive plotting via the iPlots R-package, which is written in Java. It will have to be extended.
 
@@ -26,9 +26,9 @@ Distant tasks
 =============
 
 * Make HPC resources available via the graphical user interface
-	- Parallelize (R/parallel, snow, RHIPE packages)
+    - Parallelize (R/parallel, snow, RHIPE packages)
 * Enable other computational backends, e.g. BUGS/JAGS, Weka etc.
-	
+
 ====================
 Graphical components
 ====================
@@ -62,6 +62,6 @@ The first use cases
 ===================
 
 * Cross-validated lm.ridge operation from start to end (lm.ridge instead of lm because lm.ridge involves setting a parameter)
-	- Centering and scaling of data
-	- Cross-validation of the whole procedure
+    - Centering and scaling of data
+    - Cross-validation of the whole procedure
 * Random forest
